@@ -12,7 +12,7 @@ return new class extends Migration
         Schema::create('barang_keluars', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('barang_id');
-            $table->unsignedInteger('jumlah');
+            $table->unsignedInteger('jumlah')->default(0);
             $table->date('tanggal_keluar');
             $table->string('keterangan')->nullable();
             $table->timestamps();
